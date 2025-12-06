@@ -15,17 +15,14 @@ public class Item {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
-
     private String name;
-
-    private String description;
-
-    //@TODO Consider if it is really needed
-    private String hiddenDescription;
-
+    private String itemColor;
+    private String additionalInfo;
     //@TODO Set as DAY-MONTH-YEAR
-    private Date dateFound;
-
+    private Date foundDate;
+    private String location;
+    private String foundPlace;
     //TODO Consider requirement DAY-MONTH-YEAR
-    private Date dateStored;
+    private Date notificationDate;
+    private String warehousePlace;
 }
