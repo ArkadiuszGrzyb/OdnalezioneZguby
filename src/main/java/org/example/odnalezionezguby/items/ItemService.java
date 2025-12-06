@@ -13,4 +13,15 @@ public class ItemService {
         return itemRepository.findByName(name);
     }
 
+    public Item saveItem(Item item){
+        return itemRepository.save(item);
+    }
+
+    public Item updateItem(Item item){
+        return itemRepository.save(item);
+    }
+
+    public Item deleteItemById(Long id){
+        return itemRepository.deleteItemById(id);
+    }
 }
