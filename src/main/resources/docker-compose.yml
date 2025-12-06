@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:16.11-alpine3.23
+    container_name: zguby
+    environment:
+      POSTGRES_USER: developer
+      POSTGRES_PASSWORD: odnalezione
+      POSTGRES_DB: zguby
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
