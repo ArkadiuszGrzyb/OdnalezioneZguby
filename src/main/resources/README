@@ -5,5 +5,3 @@ provided by us
 
 go to docker-compose.yml file in resources folder and run command:
 docker-compose -p zguby up -d
-
-@TODO: Add docker image and container configuration

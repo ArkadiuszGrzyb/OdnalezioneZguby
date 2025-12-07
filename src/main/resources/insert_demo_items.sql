@@ -15,7 +15,7 @@ INSERT INTO public.item (
           'Main Square bench',
           'Black',
           'Krakow',
-          'Wallet',
+          'demo Wallet',
           DATE '2025-12-07',
           'Shelf A3',
           nextval('public.item_seq')
@@ -26,7 +26,7 @@ INSERT INTO public.item (
           'Bus stop near Galeria Krakowska',
           'Blue',
           'Krakow',
-          'Umbrella',
+          'Umbrella demo',
           DATE '2025-11-21',
           'Shelf B1',
           nextval('public.item_seq')
@@ -59,7 +59,7 @@ INSERT INTO public.item (
           'Train station platform',
           'Black',
           'Krakow',
-          'Backpack',
+          'Backpack demo',
           DATE '2025-08-13',
           'Shelf E5',
           nextval('public.item_seq')
@@ -70,7 +70,7 @@ INSERT INTO public.item (
           'Church entrance',
           'Gold',
           'Krakow',
-          'Ring',
+          'demo Ring',
           DATE '2025-07-08',
           'Safe F6',
           nextval('public.item_seq')
