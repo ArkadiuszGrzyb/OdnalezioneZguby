@@ -23,6 +23,7 @@ public class ItemController {
         return itemService.findItemByName(name);
     }
 
+    //@TODO implement pagination
     @GetMapping("/collection")
         public List<Item> searchItemsByName(@RequestParam String name){
         logger.info("Received request to search for items than contains in name: {}", name);
