@@ -1,6 +1,7 @@
 package org.example.odnalezionezguby.items;
 
 import lombok.RequiredArgsConstructor;
+import org.example.odnalezionezguby.xml.XmlGenerator;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -29,6 +30,11 @@ public class ItemService {
 
     public List<Item> searchItemsByName(String name){
         return itemRepository.findByNameContainingIgnoreCase(name);
+    }
+
+    public Item generateItemXml(String name){
+        //@todo attach xml generator
+        return findItemByName(name);
     }
 
 }

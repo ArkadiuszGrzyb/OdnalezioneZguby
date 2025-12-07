@@ -5,3 +5,10 @@ provided by us
 
 go to docker-compose.yml file in resources folder and run command:
 docker-compose -p zguby up -d
+
+Database demo data can be added by executing insert_demo_items.sql script located in resourcesfolder
+
+We provide:
+-Rest api to perform basic operations lost items
+-.xml files generator of lost items data
+- Database with demo data

@@ -23,7 +23,12 @@ public class ItemController {
         return itemService.findItemByName(name);
     }
 
-    //@TODO implement pagination
+    @GetMapping()
+    public Item generateItemXml(@RequestParam String name){
+        logger.info("Received request to generate xml file for item with name: {}", name);
+        return itemService.generateItemXml(name);
+    }
+
     @GetMapping("/collection")
         public List<Item> searchItemsByName(@RequestParam String name){
         logger.info("Received request to search for items than contains in name: {}", name);

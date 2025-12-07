@@ -1,0 +1,48 @@
+<datasets xmlns="urn:otwarte-dane:harvester:1.13" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset status="published">
+        <extIdent>dataset_551</extIdent>
+        <title>
+            <polish>Dane zaginionych przedmiotow</polish>
+            <english>Details of the missing items</english>
+        </title>
+        <description>
+            <polish>Zbiór danych zawiera informacje o Parasol</polish>
+            <english>The dataset contains information about Parasol</english>
+        </description>
+        <updateFrequency>daily</updateFrequency>
+        <hasDynamicData>false</hasDynamicData>
+        <hasHighValueData>true</hasHighValueData>
+        <hasHighValueDataFromEuropeanCommissionList>false</hasHighValueDataFromEuropeanCommissionList>
+        <hasResearchData>false</hasResearchData>
+        <categories>
+            <category>ECON</category>
+        </categories>
+        <resources>
+            <resource status="published">
+                <extIdent>extIdent_551</extIdent>
+                <url>https://example.com/Parasol-2025-11-19.csv</url>
+                <title>
+                    <polish>Parasol 2025-11-19</polish>
+                    <english>Parasol 2025-11-19</english>
+                </title>
+                <description>
+                    <polish>Dane dotyczące Niebieski parasol, lekko podarty udostępnione 2025-11-19</polish>
+                    <english>Data concerning Niebieski parasol, lekko podarty made available 2025-11-19</english>
+                </description>
+                <availability>local</availability>
+                <dataDate>2025-11-19</dataDate>
+                <specialSigns>
+                    <specialSign>X</specialSign>
+                </specialSigns>
+                <hasDynamicData>false</hasDynamicData>
+                <hasHighValueData>true</hasHighValueData>
+                <hasHighValueDataFromEuropeanCommissionList>false</hasHighValueDataFromEuropeanCommissionList>
+                <hasResearchData>false</hasResearchData>
+                <containsProtectedData>false</containsProtectedData>
+            </resource>
+        </resources>
+        <tags>
+            <tag lang="pl">Deweloper</tag>
+        </tags>
+    </dataset>
+</datasets>
