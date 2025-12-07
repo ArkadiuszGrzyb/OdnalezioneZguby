@@ -12,8 +12,6 @@ import java.util.Date;
 @Entity
 public class Item {
 
-    //@TODO sourceRow pole sprawdź w JSONIE i w insercie demo danych
-
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
