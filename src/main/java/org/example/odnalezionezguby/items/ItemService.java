@@ -3,6 +3,8 @@ package org.example.odnalezionezguby.items;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class ItemService {
@@ -24,4 +26,9 @@ public class ItemService {
     public Item deleteItemById(Long id){
         return itemRepository.deleteItemById(id);
     }
+
+    public List<Item> searchItemsByName(String name){
+        return itemRepository.findByNameContainingIgnoreCase(name);
+    }
+
 }
