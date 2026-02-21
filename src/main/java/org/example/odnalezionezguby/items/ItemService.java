@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -13,6 +14,10 @@ public class ItemService {
 
     public Item findItemByName(String name){
         return itemRepository.findByName(name);
+    }
+
+    public Optional<Item> findById(Long id) {
+        return itemRepository.findById(id);
     }
 
     public Item saveItem(Item item){

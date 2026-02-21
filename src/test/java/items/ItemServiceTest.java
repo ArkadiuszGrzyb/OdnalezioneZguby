@@ -73,8 +73,8 @@ public class ItemServiceTest {
         Item result = itemService.deleteItemById(itemToDelete.getId());
 
         //then
-        assertEquals("Delete me",result.getName());
-        assertNull(itemService.findItemByName("Delete me"));
+        assertEquals(itemToDelete.getId(), result.getId());
+        assertTrue(itemService.findById(itemToDelete.getId()).isEmpty());
     }
 
     @Test
