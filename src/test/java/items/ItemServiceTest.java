@@ -17,8 +17,6 @@ public class ItemServiceTest {
 
     @Autowired
     private  ItemService itemService;
-    @Autowired
-    private  ItemRepository itemRepository;
 
     @Test
     void findItemByName_returnsMatchingItem(){
@@ -45,8 +43,8 @@ public class ItemServiceTest {
         Item result = itemService.saveItem(item);
 
         //then
-        assertEquals("Umbrella", item.getName());
-        assertEquals("Black",item.getItemColor());
-
+        assertEquals("Umbrella", result.getName());
+        assertEquals("Black",result.getItemColor());
     }
+
 }
