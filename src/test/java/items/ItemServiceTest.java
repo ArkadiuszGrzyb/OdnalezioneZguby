@@ -2,7 +2,6 @@ package items;
 
 import org.example.odnalezionezguby.OdnalezioneZgubyApplication;
 import org.example.odnalezionezguby.items.Item;
-import org.example.odnalezionezguby.items.ItemRepository;
 import org.example.odnalezionezguby.items.ItemService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
