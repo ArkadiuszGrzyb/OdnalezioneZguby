@@ -8,7 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import java.util.List;
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest(classes = OdnalezioneZgubyApplication.class)
 @Transactional
@@ -44,6 +45,56 @@ public class ItemServiceTest {
         //then
         assertEquals("Umbrella", result.getName());
         assertEquals("Black",result.getItemColor());
+    }
+
+    @Test
+    void updateItem_returnsUpdatedItem(){
+        //given
+        Item item = new Item();
+        item.setName("Before update");
+        itemService.saveItem(item);
+
+        //when
+        item.setName("After update");
+        Item result = itemService.updateItem(item);
+
+        //then
+        assertEquals("After update",result.getName());
+    }
+
+    @Test
+    void deleteItemById_returnsDeletedItem(){
+        //given
+        Item item = new Item();
+        item.setName("Delete me");
+        Item itemToDelete = itemService.saveItem(item);
+
+        //when
+        Item result = itemService.deleteItemById(itemToDelete.getId());
+
+        //then
+        assertEquals("Delete me",result.getName());
+        assertNull(itemService.findItemByName("Delete me"));
+    }
+
+    @Test
+    void searchItemsByName_returnsItemList(){
+        //given
+        Item firstItem = new Item();
+        firstItem.setName("Bike first");
+        itemService.saveItem(firstItem);
+
+        Item secondItem = new Item();
+        secondItem.setName("Bike second");
+        itemService.saveItem(secondItem);
+
+        //when
+        List<Item> result = itemService.searchItemsByName("Bike");
+
+        //then
+        assertEquals(2, result.size());
+        assertTrue(result.stream().anyMatch(item -> item.getName().equals("Bike first")));
+        assertTrue(result.stream().anyMatch(item -> item.getName().equals("Bike second")));
     }
 
 }
