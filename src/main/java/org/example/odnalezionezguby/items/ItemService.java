@@ -28,8 +28,8 @@ public class ItemService {
         return itemRepository.save(item);
     }
 
-    public Item deleteItemById(Long id){
-        return itemRepository.deleteItemById(id);
+    public void deleteItemById(Long id){
+         itemRepository.deleteItemById(id);
     }
 
     public List<Item> searchItemsByName(String name){

@@ -1,8 +1,5 @@
-package items;
+package org.example.odnalezionezguby.items;
 
-import org.example.odnalezionezguby.OdnalezioneZgubyApplication;
-import org.example.odnalezionezguby.items.Item;
-import org.example.odnalezionezguby.items.ItemService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest(classes = OdnalezioneZgubyApplication.class)
+@SpringBootTest
 @Transactional
 public class ItemServiceTest {
 
@@ -70,10 +67,9 @@ public class ItemServiceTest {
         Item itemToDelete = itemService.saveItem(item);
 
         //when
-        Item result = itemService.deleteItemById(itemToDelete.getId());
+        itemService.deleteItemById(itemToDelete.getId());
 
         //then
-        assertEquals(itemToDelete.getId(), result.getId());
         assertTrue(itemService.findById(itemToDelete.getId()).isEmpty());
     }
 

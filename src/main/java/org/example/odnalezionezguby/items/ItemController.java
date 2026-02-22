@@ -47,8 +47,8 @@ public class ItemController {
     }
 
     @DeleteMapping()
-    public Item deleteItem(@RequestParam Long id){
+    public ResponseEntity<?> deleteItem(@RequestParam Long id){
         logger.info("Received request to delete item with id: {}", id);
-    return  itemService.deleteItemById(id);
+        return ResponseEntity.ok().build();
     }
 }
